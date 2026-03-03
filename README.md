@@ -30,7 +30,7 @@ Jednoduchá webová aplikace pro správu a zobrazení e‑knih. Obsahuje veřejn
 ### 1) Klonování
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Philip7555/EBOOK-APP.git
 cd ebook-app
 ```
 
