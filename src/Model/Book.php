@@ -4,6 +4,18 @@ require_once __DIR__ . '/Database.php';
 
 class Book
 {
+    public static function getCoverOrDefault(?string $cover): string
+    {
+        if (!empty($cover)) {
+            $path = __DIR__ . '/../../public' . $cover;
+            if (is_file($path)) {
+                return $cover;
+            }
+        }
+
+        return '/images/default_cover.jpg';
+    }
+    
     public static function getAll(): array
     {
         $db = Database::getConnection();
