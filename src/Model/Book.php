@@ -17,7 +17,6 @@ class Book
         // MIME detekce přes finfo (bezpečnější než mime_content_type)
         $finfo = finfo_open(FILEINFO_MIME_TYPE);
         $fileType = finfo_file($finfo, $_FILES['cover_file']['tmp_name']);
-        finfo_close($finfo);
 
         $allowedTypes = [
             'image/jpeg' => '.jpg',
