@@ -18,65 +18,70 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Přidat knihu</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/darkmode.js" defer></script>
 </head>
 
-<body>
+<body class="admin-layout">
 
-    <div>
+    <div class="container">
 
-        <div>
+        <div class="admin-card">
 
-            <div>
-                <h1>Přidat novou knihu</h1>
+            <div class="page-header">
+                <h1 class="admin-title">Přidat novou knihu</h1>
+
+                <button id="darkmode-toggle" class="darkmode-btn">
+                    <img src="images/LDM.svg" alt="Dark mode">
+                </button>
             </div>
 
             <form method="post" enctype="multipart/form-data">
 
-                <div>
-                    <div>
+                <div class="row">
+                    <div class="col-6">
                         <label>Název</label>
                         <input type="text" name="title" required>
                     </div>
 
-                    <div>
+                    <div class="col-6">
                         <label>Autor</label>
                         <input type="text" name="author" required>
                     </div>
 
-                    <div>
+                    <div class="col-6">
                         <label>Žánr</label>
                         <input type="text" name="genre">
                     </div>
 
-                    <div>
+                    <div class="col-6">
                         <label>Rok vydání</label>
                         <input type="number" name="year" min="0" max="3000">
                     </div>
 
-                    <div>
+                    <div class="col-6">
                         <label>Cena (Kč)</label>
                         <input type="number" name="price" min="0" step="0.01">
                     </div>
 
-                    <div>
+                    <div class="col-6">
                         <label>Hodnocení</label>
                         <input type="number" name="rating" min="0" max="5" step="0.1">
                     </div>
 
-                    <div>
+                    <div class="col-12">
                         <label>Popis</label>
                         <textarea name="description" rows="5"></textarea>
                     </div>
 
-                    <div>
+                    <div class="col-12">
                         <label>Obálka</label>
                         <input type="file" name="cover_file">
                     </div>
                 </div>
 
-                <div>
-                    <button type="submit">Uložit</button>
-                    <a href="admin.php">Zpět</a>
+                <div class="admin-actions">
+                    <button type="submit" class="btn">Uložit</button>
+                    <a href="admin.php" class="btn btn-danger">Zpět</a>
                 </div>
 
             </form>

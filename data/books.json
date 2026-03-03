@@ -1,0 +1,82 @@
+[
+    {
+        "title": "Pán prstenů: Společenstvo prstenu",
+        "author": "J. R. R. Tolkien",
+        "genre": "Fantasy",
+        "year": 1954,
+        "price": 399,
+        "rating": 9.5,
+        "description": "První díl epické trilogie o cestě za zničením Jednoho prstenu.",
+        "cover_url": "https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg"
+    },
+    {
+        "title": "Farma zvířat",
+        "author": "George Orwell",
+        "genre": "Satira",
+        "year": 1945,
+        "price": 199,
+        "rating": 8.7,
+        "description": "Alegorický příběh o zvířatech, která převezmou farmu a vytvoří vlastní režim.",
+        "cover_url": "https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg"
+    },
+    {
+        "title": "Sto roků samoty",
+        "author": "Gabriel García Márquez",
+        "genre": "Magický realismus",
+        "year": 1967,
+        "price": 329,
+        "rating": 9.1,
+        "description": "Sága rodu Buendíů v městečku Macondo, kde se prolíná realita s magií.",
+        "cover_url": "https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg"
+    },
+    {
+        "title": "Jméno růže",
+        "author": "Umberto Eco",
+        "genre": "Historická detektivka",
+        "year": 1980,
+        "price": 289,
+        "rating": 8.9,
+        "description": "Detektivní příběh z benediktinského kláštera, kde se dějí záhadná úmrtí.",
+        "cover_url": "https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg"
+    },
+    {
+        "title": "Zaklínač: Poslední přání",
+        "author": "Andrzej Sapkowski",
+        "genre": "Fantasy",
+        "year": 1993,
+        "price": 259,
+        "rating": 8.8,
+        "description": "Sbírka povídek o zaklínači Geraltovi z Rivie, lovci příšer s vlastním morálním kodexem.",
+        "cover_url": "https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg"
+    },
+    {
+        "title": "Duna",
+        "author": "Frank Herbert",
+        "genre": "Sci‑fi",
+        "year": 1965,
+        "price": 349,
+        "rating": 9.3,
+        "description": "Politicko‑ekologická space opera z pouštní planety Arrakis, klíče k nejcennější surovině ve vesmíru.",
+        "cover_url": "https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg"
+    },
+    {
+        "title": "Zločin a trest",
+        "author": "Fjodor Michajlovič Dostojevskij",
+        "genre": "Román",
+        "year": 1866,
+        "price": 279,
+        "rating": 9.0,
+        "description": "Psychologický román o studentovi Raskolnikovovi a jeho vnitřním boji po spáchání vraždy.",
+        "cover_url": "https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg"
+    },
+    {
+        "title": "Malý princ",
+        "author": "Antoine de Saint‑Exupéry",
+        "genre": "Pohádka / filozofický příběh",
+        "year": 1943,
+        "price": 189,
+        "rating": 9.4,
+        "description": "Poetický příběh o chlapci z jiné planety, který učí dospělé znovu vidět podstatu věcí.",
+        "cover_url": "https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg"
+    }
+]

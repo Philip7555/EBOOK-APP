@@ -22,36 +22,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Přihlášení</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/darkmode.js" defer></script>
 </head>
 
-<body>
+<body class="admin-layout">
 
-<div>
+    <div class="container">
 
-    <div>
-        <h1>Přihlášení</h1>
+        <div class="page-header">
+            <h1>Přihlášení</h1>
+
+            <button id="darkmode-toggle" class="darkmode-btn">
+                <img src="images/LDM.svg" alt="Dark mode">
+            </button>
+        </div>
+
+        <div class="admin-card login-box">
+
+            <?php if ($error): ?>
+                <div class="admin-card error">
+                    <?= htmlspecialchars($error) ?>
+                </div>
+            <?php endif; ?>
+
+            <form method="post">
+                <label>Heslo</label>
+                <input type="password" name="password" required>
+
+                <div class="admin-actions">
+                    <button type="submit" class="btn">Přihlásit</button>
+                </div>
+            </form>
+
+        </div>
+
     </div>
-
-    <div>
-
-        <?php if ($error): ?>
-            <div>
-                <?= htmlspecialchars($error) ?>
-            </div>
-        <?php endif; ?>
-
-        <form method="post">
-            <label>Heslo</label>
-            <input type="password" name="password" required>
-
-            <div>
-                <button type="submit">Přihlásit</button>
-            </div>
-        </form>
-
-    </div>
-
-</div>
 
 </body>
+
 </html>

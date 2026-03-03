@@ -1,0 +1,40 @@
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.book-item {
+    background: white;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    img {
+        width: 120px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+html.dark .book-item {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: #e0e0e0;
+
+    a {
+        color: #e0e0e0;
+    }
+
+    img {
+        border: 1px solid #555;
+    }
+}

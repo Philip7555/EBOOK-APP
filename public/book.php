@@ -16,15 +16,20 @@ if (!$book) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $book ? htmlspecialchars($book['title']) : 'Kniha nenalezena' ?></title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/darkmode.js" defer></script>
 </head>
 
 <body>
 
-    <div>
+    <div class="page-header">
         <h1>Detail knihy</h1>
+
+        <button id="darkmode-toggle" class="darkmode-btn">
+            <img src="images/LDM.svg" alt="Dark mode">
+        </button>
     </div>
 
-    <div>
+    <div class="book-detail">
 
         <?php if (!$book): ?>
 
@@ -33,17 +38,17 @@ if (!$book) {
 
         <?php else: ?>
 
-            <button onclick="window.print()">Tisknout</button>
+            <button onclick="window.print()" class="print-button">Tisknout</button>
 
-            <div>
+            <div class="book-layout">
 
-                <div>
+                <div class="book-cover">
                     <img src="<?= Book::getCoverOrDefault($book['cover']) ?>"
-                         alt="Obálka knihy"
-                         loading="lazy">
+                        alt="Obálka knihy"
+                        loading="lazy">
                 </div>
 
-                <div>
+                <div class="book-info">
                     <h2><?= htmlspecialchars($book['title']) ?></h2>
 
                     <p><strong>Autor:</strong> <?= htmlspecialchars($book['author']) ?></p>
@@ -56,11 +61,12 @@ if (!$book) {
 
             </div>
 
-            <p><a href="index.php">← Zpět na katalog</a></p>
+            <p><a href="index.php" class="back-link">← Zpět na katalog</a></p>
 
         <?php endif; ?>
 
     </div>
 
 </body>
+
 </html>

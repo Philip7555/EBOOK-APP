@@ -40,43 +40,48 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="js/darkmode.js" defer></script>
 </head>
 
-<body>
+<body class="admin-layout">
 
-<div>
+    <div class="container">
 
-    <div>
+        <div class="admin-card">
 
-        <div>
-            <h1>Import knih</h1>
+            <div class="page-header">
+                <h1 class="admin-title">Import knih</h1>
+
+                <button id="darkmode-toggle" class="darkmode-btn">
+                    <img src="images/LDM.svg" alt="Dark mode">
+                </button>
+            </div>
+
+            <?php if ($result): ?>
+                <div class="admin-card <?= $result['success'] ? 'success' : 'error' ?>">
+                    <?= htmlspecialchars($result['message']) ?>
+                </div>
+            <?php endif; ?>
+
+            <h3>Import ze statického souboru</h3>
+            <form method="post">
+                <button type="submit" name="import_static" class="btn">Spustit import</button>
+            </form>
+
+            <hr>
+
+            <h3>Import z vlastního JSON</h3>
+            <form method="post" enctype="multipart/form-data">
+                <label>Nahrát JSON soubor:</label>
+                <input type="file" name="json_file" accept=".json" required>
+
+                <div class="admin-actions">
+                    <button type="submit" name="import_upload" class="btn">Importovat</button>
+                    <a href="admin.php" class="btn btn-danger">Zpět</a>
+                </div>
+            </form>
+
         </div>
-
-        <?php if ($result): ?>
-            <div <?= $result['success'] ? 'success' : 'error' ?>">
-                <?= htmlspecialchars($result['message']) ?>
-            </div>
-        <?php endif; ?>
-
-        <h3>Import ze statického souboru</h3>
-        <form method="post">
-            <button type="submit" name="import_static">Spustit import</button>
-        </form>
-
-        <hr>
-
-        <h3>Import z vlastního JSON</h3>
-        <form method="post" enctype="multipart/form-data">
-            <label>Nahrát JSON soubor:</label>
-            <input type="file" name="json_file" accept=".json" required>
-
-            <div>
-                <button type="submit" name="import_upload">Importovat</button>
-                <a href="admin.php">Zpět</a>
-            </div>
-        </form>
 
     </div>
 
-</div>
-
 </body>
+
 </html>

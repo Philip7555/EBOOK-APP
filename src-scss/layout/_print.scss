@@ -1,0 +1,33 @@
+@media print {
+    body * {
+        visibility: hidden !important;
+    }
+
+    .book-layout,
+    .book-layout * {
+        visibility: visible !important;
+    }
+
+    .book-layout {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background: white !important;
+        color: black !important;
+    }
+
+    .book-cover img {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .print-button,
+    .back-link,
+    #darkmode-toggle,
+    .page-header {
+        display: none !important;
+    }
+}
