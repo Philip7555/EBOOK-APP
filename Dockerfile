@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
     libsqlite3-dev \
     && docker-php-ext-install pdo pdo_sqlite
 
-# Enable Apache mod_rewrite (optional but useful)
+# Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
 # Copy project files

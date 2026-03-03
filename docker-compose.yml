@@ -7,3 +7,4 @@ services:
       - ./public:/var/www/html
       - ./src:/var/www/src
       - ./data:/var/www/data
+    restart: unless-stopped
