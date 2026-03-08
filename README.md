@@ -40,7 +40,7 @@ cd ebook-app
 docker compose up -d
 ```
 
-Aplikace poběží na: http://localhost:8080
+Aplikace poběží na: http://localhost:8000
 
 ### 3) Kompilace SASS
 
